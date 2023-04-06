@@ -10,7 +10,7 @@
         "db:dev": "yarn prisma studio --port 5556",
         "postinstall": "prisma generate",
         "lint": "next lint",
-        "start": "next start"
+        "start": "next start -p 3091"
     },
     "dependencies": {
         "@heroicons/react": "^2.0.17",

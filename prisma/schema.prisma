@@ -120,25 +120,6 @@ model ResetPasswordRequest {
     expires   DateTime
 }
 
-model Doctor {
-    id Int @id @default(autoincrement())
-
-    image    String
-    fullName String
-
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-}
-
-model Service {
-    id Int @id @default(autoincrement())
-
-    name String
-
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-}
-
 model Feedback {
     id      Int      @id @default(autoincrement())
     date    DateTime @default(now())

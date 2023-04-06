@@ -1,5 +1,5 @@
 import { Trail, Float, Stars, PresentationControls } from "@react-three/drei"
-import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber"
+import { Canvas, useFrame, useLoader } from "@react-three/fiber"
 import { EffectComposer, Bloom } from "@react-three/postprocessing"
 import GoogleMap from "modules/landing-page/GoogleMap"
 import { getPageLayout } from "modules/layouts/PageLayout"
@@ -8,7 +8,7 @@ import { useMemo, useRef } from "react"
 import * as THREE from "three"
 import { inferSSRProps } from "types/inferSSRProps"
 
-import { ssgInit } from "server/lib/ssg"
+// import { ssgInit } from "server/lib/ssg"
 
 function Home({}: inferSSRProps<typeof getStaticProps>) {
     return (
@@ -38,10 +38,10 @@ function Home({}: inferSSRProps<typeof getStaticProps>) {
 }
 
 function Atom(props: any) {
-    const points = useMemo(
-        () => new THREE.EllipseCurve(0, 0, 3, 1.15, 0, 2 * Math.PI, false, 0).getPoints(100),
-        []
-    )
+    // const points = useMemo(
+    //     () => new THREE.EllipseCurve(0, 0, 3, 1.15, 0, 2 * Math.PI, false, 0).getPoints(100),
+    //     []
+    // )
 
     return (
         <group {...props}>
@@ -98,10 +98,10 @@ Home.getLayout = getPageLayout
 export default Home
 
 export const getStaticProps = async (ctx: GetStaticPropsContext) => {
-    const ssr = await ssgInit(ctx)
+    // const ssr = await ssgInit(ctx)
 
     const props = {
-        trpcState: ssr.dehydrate(),
+        // trpcState: ssr.dehydrate(),
     }
 
     return {

@@ -8,8 +8,6 @@ import { useMemo, useRef } from "react"
 import * as THREE from "three"
 import { inferSSRProps } from "types/inferSSRProps"
 
-// import { ssgInit } from "server/lib/ssg"
-
 function Home({}: inferSSRProps<typeof getStaticProps>) {
     return (
         <div className="relative min-h-screen w-full">
@@ -45,11 +43,11 @@ function Atom(props: any) {
 
     return (
         <group {...props}>
-            <Electron position={[0, -1, 0.5]} speed={1.5} rotation={[0, 0, -0.3]} />
-            <Electron position={[0, 0, 0.5]} speed={2} rotation={[0, 0, -0.2]} />
-            <Electron position={[0, 1, 0.5]} speed={3} rotation={[0, 0, 0]} />
-            <Electron position={[0, 2, 0.5]} speed={2} rotation={[0, 0, 0.4]} />
-            <Electron position={[0, 2, 0.5]} speed={1.5} rotation={[0, 0, 0.2]} />
+            <Electron position={[0, -1, 0.5]} speed={2.5} rotation={[0, 0, -0.3]} />
+            <Electron position={[0, 0, 0.5]} speed={3} rotation={[0, 0, -0.2]} />
+            <Electron position={[0, 1, 0.5]} speed={4} rotation={[0, 0, 0]} />
+            <Electron position={[0, 2, 0.5]} speed={3} rotation={[0, 0, 0.4]} />
+            <Electron position={[0, 2, 0.5]} speed={2.5} rotation={[0, 0, 0.2]} />
         </group>
     )
 }
